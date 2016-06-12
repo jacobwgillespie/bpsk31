@@ -47,15 +47,18 @@ end
 # end
 
 helpers do
-  def inline_css(*names)
-    names.map do |name|
-      name = name.to_s
-      name += '.css' unless name.include?('.css')
-      css_path = sitemap.resources.select do |p|
-        p.source_file.include?(name)
-      end.first
-      "<style type=\"text/css\" amp-custom>#{css_path.render}</style>"
-    end.reduce(:+)
+  def inline_css(name)
+    name = "#{name}.css" unless name.to_s.include?('.css')
+    css_path = sitemap.resources.select do |p|
+      p.source_file.include?(name)
+    end.first
+
+    root_node = ::Sass::SCSS::CssParser.new(
+      css_path.render, 'middleman-css-input', 1
+    ).parse
+    root_node.options = { style: :compressed }
+
+    "<style type=\"text/css\" amp-custom>#{root_node.render.strip}</style>"
   end
 end
 
