@@ -24,12 +24,12 @@ set :markdown,
     fenced_code_blocks: true
 set :markdown_engine, :redcarpet
 
-activate :vcs_time
-activate :directory_indexes
-
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions']
 end
+
+activate :directory_indexes
+activate :vcs_time
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -65,11 +65,9 @@ end
 
 # Build-specific configuration
 configure :build do
-  # Minify CSS on build
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
-
+  activate :minify_html
   activate :asset_hash
+  activate :gzip
 end

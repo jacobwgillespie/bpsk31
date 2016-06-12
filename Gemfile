@@ -8,10 +8,11 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 # Windows does not come with time zone data
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
+gem 'redcarpet'
+
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-autoprefixer'
 gem 'middleman-livereload'
+gem 'middleman-minify-html'
 gem 'middleman-vcs-time'
-
-gem 'redcarpet'
