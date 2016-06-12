@@ -31,6 +31,10 @@ end
 activate :directory_indexes
 activate :vcs_time
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
   # activate :livereload
