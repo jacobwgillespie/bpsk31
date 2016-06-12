@@ -21,6 +21,10 @@ rm -rf .git
 # Set CDN host
 echo "cdn.bpsk31.com" > CNAME
 
+# Remove all HTML files
+find . -name '*.html' -type f -delete
+find . -name '*.html.gz' -type f -delete
+
 # Deploy to CDN
 git init
 git config user.name "Jacob Gillespie"
