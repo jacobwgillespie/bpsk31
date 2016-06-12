@@ -13,7 +13,6 @@ gem 'redcarpet'
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-autoprefixer'
-gem 'middleman-deploy', '~> 1.0'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-vcs-time'
