@@ -77,5 +77,6 @@ configure :build do
   activate :minify_javascript
   activate :minify_html
   activate :asset_hash
+  activate :asset_host, host: 'https://cdn.bpsk31.com'
   activate :gzip
 end
