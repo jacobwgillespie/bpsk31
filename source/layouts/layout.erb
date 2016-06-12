@@ -39,15 +39,24 @@
     <div class="section typeset">
       <%= yield %>
 
+      <% unless current_page.data.hide_comments %>
       <h2>Discussion</h2>
       <div id="disqus_thread"></div>
-      <script type="text/javascript">
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'http://bpsk31.com<%= current_page.data.disqus_path || current_page.url %>';
+          // this.page.identifier = PAGE_IDENTIFIER;
+        };
         (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//bpsk31.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+        var d = document, s = d.createElement('script'); s.src = '//bpsk31.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
       </script>
+      <% end %>
     </div>
+
+    <footer class="footer">
+      <div class="section">
+        Website copyright &copy; <%= Date.today.year %>.  Contact <a href="mailto:jacobwgillespie@gmail.com">Jacob, KD5TEN</a> with any questions or comments.
+      </div>
+    </footer>
   </body>
 </html>

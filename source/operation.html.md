@@ -1,5 +1,6 @@
 ---
 title: PSK31 Setup and Operation
+disqus_path: /
 ---
 
 # PSK31 Setup and Operation
