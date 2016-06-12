@@ -18,7 +18,10 @@ page '/*.txt', layout: false
 
 # General configuration
 
-set :markdown, layout_engine: :haml, with_toc_data: true
+set :markdown,
+    layout_engine: :haml,
+    with_toc_data: true,
+    fenced_code_blocks: true
 set :markdown_engine, :redcarpet
 
 activate :directory_indexes

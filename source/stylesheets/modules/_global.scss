@@ -38,4 +38,22 @@ img {
 
 ul.toc {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: -2em;
+  justify-content: center;
+
+  @include breakpoint(break-1) {
+    flex-direction: row;
+  }
+
+  li {
+    margin-right: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.discussion {
+  margin-top: 2em;
 }

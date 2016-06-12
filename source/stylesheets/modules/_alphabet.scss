@@ -1,0 +1,23 @@
+.alphabet {
+  font-family: unquote(map-get($monospacetype, font-family));
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -2em;
+
+  .letter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  .ascii {
+    font-weight: bold;
+  }
+  .code {
+    text-align: right;
+    padding-right: 2em;
+  }
+}
