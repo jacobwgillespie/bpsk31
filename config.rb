@@ -32,7 +32,7 @@ end
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  # activate :livereload
 end
 
 ###
@@ -45,6 +45,19 @@ end
 #     "Helping"
 #   end
 # end
+
+helpers do
+  def inline_css(*names)
+    names.map do |name|
+      name = name.to_s
+      name += '.css' unless name.include?('.css')
+      css_path = sitemap.resources.select do |p|
+        p.source_file.include?(name)
+      end.first
+      "<style type=\"text/css\" amp-custom>#{css_path.render}</style>"
+    end.reduce(:+)
+  end
+end
 
 # Build-specific configuration
 configure :build do
