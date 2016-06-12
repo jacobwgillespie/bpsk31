@@ -1,5 +1,6 @@
 ---
 title: PSK31 Software
+description: PSK31 software for Windows, Mac OS X, and Linux, with basic information about each.
 ---
 
 ## PSK31 Software

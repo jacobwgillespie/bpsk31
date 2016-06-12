@@ -1,5 +1,7 @@
 ---
 title: About PSK31
+description: >
+  About the PSK31 operating mode, a brief history, the difference between BPSK31 and QPSK31, and the PSK31 specification.
 ---
 
 ## About PSK31
