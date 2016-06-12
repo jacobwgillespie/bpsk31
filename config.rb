@@ -61,6 +61,14 @@ helpers do
 
     "<style type=\"text/css\" amp-custom>#{root_node.render.strip}</style>"
   end
+
+  def mtime
+    current_page.mtime.iso8601
+  rescue
+    (
+      current_page.source_file ? File.mtime(current_page.source_file) : Time.now
+    ).iso8601
+  end
 end
 
 # Build-specific configuration
