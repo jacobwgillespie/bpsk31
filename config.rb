@@ -24,6 +24,7 @@ set :markdown,
     fenced_code_blocks: true
 set :markdown_engine, :redcarpet
 
+activate :vcs_time
 activate :directory_indexes
 
 activate :autoprefixer do |config|

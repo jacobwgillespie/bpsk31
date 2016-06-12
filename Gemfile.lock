@@ -83,6 +83,8 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-vcs-time (0.0.4)
+      middleman-core (~> 4.0)
     minitest (5.9.0)
     padrino-helpers (0.13.2)
       i18n (~> 0.6, >= 0.6.7)
@@ -115,6 +117,7 @@ DEPENDENCIES
   middleman (>= 4.0.0)
   middleman-autoprefixer
   middleman-livereload
+  middleman-vcs-time
   redcarpet
   tzinfo-data
   wdm (~> 0.1.0)

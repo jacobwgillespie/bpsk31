@@ -21,7 +21,6 @@
 
   .title {
     @extend .upper;
-    text-transform: uppercase;
     font-weight: map-get($headingtype, bold);
     font-size: 2em;
     margin-bottom: 1em;
