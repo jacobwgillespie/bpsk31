@@ -1,0 +1,14 @@
+.section {
+  @include clearfix;
+
+  margin: 0 auto;
+  width: 94%;
+
+  @include breakpoint(break-3) {
+    @include maxwidth(3);
+  }
+
+  @include breakpoint(break-4) {
+    @include maxwidth(4);
+  }
+}

@@ -1,0 +1,55 @@
+.header {
+  background-color: #414b56;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1em;
+  font-family: unquote(map-get($headingtype, font-family));
+  color: #fff;
+  font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+  font-style: normal;
+
+  @include breakpoint(break-1) {
+    flex-direction: row;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  .title {
+    @extend .upper;
+    text-transform: uppercase;
+    font-weight: map-get($headingtype, bold);
+    font-size: 2em;
+    margin-bottom: 1em;
+
+    @include breakpoint(break-1) {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(break-1) {
+      flex-direction: row;
+    }
+
+    li {
+      box-sizing: border-box;
+      padding-left: 1em;
+      text-align: center;
+    }
+  }
+}

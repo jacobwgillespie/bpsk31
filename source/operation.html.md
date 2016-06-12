@@ -1,0 +1,99 @@
+---
+title: PSK31 Setup and Operation
+---
+
+# PSK31 Setup and Operation
+
+## Setup
+
+A basic PSK31 station should consist of the following components:
+
+* HF SSB Transceiver
+* Soundcard-equipped PC
+* Antenna
+* PSK31 Software
+* (optional) Soundcard Interface
+
+### Transceiver / Antenna
+
+Virtually any SSB transceiver will do. The same is true of the antenna, as PSk31 will function with a few watts and a wire antenna. Obviously, the better the transceiver and antenna, the better performance will be achieved, however PSK31 performance is often virtually the same on both low-end and high-end equipment.
+
+### PC / Software
+
+The only major requirement for the computer used to send and receive the PSK31 signals is that it contain a soundcard. As a rule, a faster CPU and more memory are desired, however PSK31 will work on virtually any PC equipped with an internal or external soundcard.
+
+Software for PSK31 is abundant, so the choice of software packages depends largely on personal preference, as will as system requirements. All PSK31 software has the basic ability to send and receive PSK31 signals. Many more features exist. Be sure to check our <a href="/apps">Software Reviews</a> section to see some of the available packages.
+
+### Soundcard Interface
+
+PSK31 software will output audio to the PC's soundcard to send a transmission, however a mechanism must exits for keying the radio to transmit an RF signal, as well as link the audio tone to the radio's audio input. Therefore some form of soundcard interface may be used. It might simply be an audio cable with a radio with VOX capabilities, or it might be a specialized external interface. These interfaces connect to the computer and key the transmitter whenever an audio tone is present. Some interfaces contain external soundcards themselves, allowing extra flexibility in soundcard setup. My personal favorite is the <a href="http://www.tigertronics.com/slusbmain.htm">SignaLink USB</a> from TigerTronics. This device is an external soundcard that connects to the computer via USB and to my Yaesu FT-857D radio via its data port. It is plug-and-play compatible with minimal setup required.
+
+Another option lies in software based keying. The software suite, Ham Radio Deluxe, can utilize this approach. If the radio's CAT port is already connected to the computer, Ham Radio Deluxe and its multimode software, Digital Master 780, will send the keying command via the CAT connection.
+
+### Setup Steps
+
+1. Setup / Install Soundcard Interface or Cable
+1. Install PSK31 Software
+1. Read User Guide / Help for Software
+1. Configure Settings as Desired
+1. Operate!
+
+## PSK31 Operation
+
+The first, and most important, step before operating any station is making sure to tune the transmitter. This will prevent damage to the transmitter and guard against messy, distorted signals. most PSK31 software packages have a testing / tuning feature for this purpose.
+
+Another thing to watch is the ALC (automatic leveling control) meter on the radio. Adjust the audio level until the ALC meter <strong>always</strong> reads at 0. If the audio level is too high, the ALC controls in the transmitter will kick in, and the result will be a distorted PSK31 signal (splatter).
+
+If you do contact someone with a messy signal, do not give them an automated (macro) <a href="http://www.rsq-info.net/">signal report</a> of 599 – an easy 595 will let them know to adjust their audio drive.
+
+Next, tune your radio to a common PSK31 frequency; two are 7.070 MHz and 14.070 MHz (see a full list of frequencies below). Make sure your radio is set to SSB mode on the upper sideband (USB). Your will not have to change frequencies after that, since PSK31 signals are so narrow (31 Hz), all the transmissions will be picked up by the receiver without changing frequencies. It is then up to the software, not the radio, what signal(s) to decode.
+
+Fire up your favorite your favorite <a href="/apps">PSK31 software</a>. Most packages will have a "waterfall" display where you will see all the signals from the receiver. If all station setup is correct, you will see something like this:
+
+In most software packages, you can click on or move a marker to a signal to begin decoding the transmission.
+
+##### Common Frequencies
+
+The 7 MHz band is much wider in region 2 (the Americas), thus 7.080 is added for that region. 7.000 to 7.040 is CW only in region 1.
+
+<table class="frequencies">
+  <thead>
+    <tr>
+      <th>Region 1</th>
+      <th>Region 2</th>
+      <th>Region 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <tr><td colspan="3">1.838 MHz</td></tr>
+    <tr><td colspan="3">3.580 MHz</td></tr>
+    <tr><td>7.040 to 7.060 MHz</td><td>7.070 MHz</td><td>7.040 to 7.060 MHz</td></tr>
+    <tr><td colspan="3">10.140 MHz</td></tr>
+    <tr><td colspan="3">14.070 MHz</td></tr>
+    <tr><td colspan="3">18.100 MHz</td></tr>
+    <tr><td colspan="3">21.080 (although most activity can be found 10 kHz lower)</td></tr>
+    <tr><td colspan="3">24.920 MHz</td></tr>
+    <tr><td colspan="3">28.120 MHz</td></tr>
+  </tbody>
+</table>
+
+### Conversation
+
+The first transmission is usually a CQ call. This is similar to CW, like this:
+
+> CQ CQ CQ de KD5TEN KD5TEN KD5TEN
+> CQ CQ CQ de KD5TEN KD5TEN KD5TEN K
+
+This basically means that KD5TEN (myself) is calling for someone to contact. The "K" a the end of the transmission means "over," signifing that the other station may begin transmission. Typically, the next transmission would be something like this:
+
+> KD5TEN KD5TEN KD5TEN de OTHERCALL OTHERCALL OTHERCALL
+> KD5TEN KD5TEN KD5TEN de OTHERCALL OTHERCALL OTHERCALL pse K
+
+After that, the conversation proceeds with the station transmitting back and forth following this format:
+
+> OTHERCALL de MYCALL Hi there! (rest of message) BTU OTHERCALL de MYCALL k
+
+The "BTU" stands for "back to you" and is optional.
+
+Finally, at the end of the conversation, both stations end their last with "sk" instead of "k" to signify the end ("sk" stands for silent key).

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title><%= current_page.data.title %> | bpsk31.com</title>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+  </head>
+
+  <body>
+    <div class="banner"></div>
+    <header class="header">
+      <a href="/" class="title">PSK31</a>
+
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/operation/">Operation</a></li>
+        <li><a href="/apps/">Software</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/bpsk31">Discussion Group</a></li>
+      </ul>
+    </header>
+
+    <div class="section typeset">
+      <%= yield %>
+
+      <h2>Discussion</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//bpsk31.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+  </body>
+</html>
