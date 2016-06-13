@@ -50,3 +50,5 @@ The site itself is served by GitHub Pages as the origin server, with CloudFlare 
 Additionally, the non-HTML files are copied to [another GitHub repository](https://github.com/jacobwgillespie/bpsk31-cdn) with a modified `CNAME` file, creating `cdn.bpsk31.com`.  This CDN domain is also served with CloudFlare, but with a [page rule](https://support.cloudflare.com/hc/en-us/articles/200168306-Is-there-a-tutorial-for-Page-Rules-) that sets the cache TTL to one year in the future.  Combined with the asset hashes, this creates an effective long-term asset cache.
 
 Commenting is powered by [Disqus](https://disqus.com/), utilizing their AMP comments widget in an `amp-iframe` element.
+
+Travis CI is connected to the repository and runs builds as tests.  If the build passes on the master branch, `scripts/deploy.sh` is automatically executed to deploy the website to GitHub.
