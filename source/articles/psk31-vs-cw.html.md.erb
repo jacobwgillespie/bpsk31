@@ -9,20 +9,20 @@ description: PSK31 is really a lot of fun to use and rarely are we constrained t
 <amp-image-lightbox id="lightbox01" layout="nodisplay"></amp-image-lightbox>
 
 <figure class="img-right">
-<amp-img on="tap:lightbox01" role="button" tabindex="0" src="home04.jpg" width="1440" height="810" layout="responsive"></amp-img>
+<amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/home04.jpg') %>" width="1440" height="810" layout="responsive"></amp-img>
 </figure>
 
 One of my special joys these days is listening to the ARRL PODCASTS hosted by Steve Ford and Joel Hallas. One PODCAST in particular, *Does CW Really Get Through When Nothing Else Can?* <sup>1</sup> resonated with me.  As an enthusiastic Binary Phase Shift Key 31 (PSK31) operator the PODCAST left me wondering how does PSK31 stack up against CW in the noisy channel.  As Joel Hallas pointed out in that broadcast, "when communications can't get through it is usually about Signal to Noise ratio (SNR); that is, not having a strong enough signal when compared to the noise". Does PSK31 rival CW communications performance?  After all, PSK31 does have similar traits to CW that intuitively suggests the very small signal bandwidth and a continuous amplitude waveform, where all of the transmit power is used while the text message is going out, that PSK31 may have comparable reception robustness to CW.  Further, in Steve Ford's article, *PSK31 – Has RTTY's Replacement Arrived?* <sup>2</sup>, PSK31  has the advantage of efficient digital signal processing algorithms used to demodulate and decode the message, and utilizes synchronized sampling rates that allow the receiver to know when to expect the next binary bit in the receiver's audio output. Surely, a PSK31 text message has a high probability of surviving the fading channel in relatively low SNR environments. Well to my surprise, where a good CW operator may be able to detect a signal at the noise floor level (SNR = 0dB) , my laboratory experiments found a PSK31 receive SNR must be at least 9 to 12 dB to successfully demodulate and decode a perfect or near-perfect text message. Amazing, the PSK31 signal must be 8 to 16 times stronger than the noise.
 
 <div class="image-grid">
 
-<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="home01.jpg" width="1440" height="810" layout="responsive"></amp-img></div>
+<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/home01.jpg') %>" width="1440" height="810" layout="responsive"></amp-img></div>
 
-<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="home02.jpg" width="1440" height="810" layout="responsive"></amp-img></div>
+<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/home02.jpg') %>" width="1440" height="810" layout="responsive"></amp-img></div>
 
-<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="home03.jpg" width="1440" height="810" layout="responsive"></amp-img></div>
+<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/home03.jpg') %>" width="1440" height="810" layout="responsive"></amp-img></div>
 
-<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="home05.jpg" width="1440" height="810" layout="responsive"></amp-img></div>
+<div><amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/home05.jpg') %>" width="1440" height="810" layout="responsive"></amp-img></div>
 
 </div>
 
@@ -30,7 +30,7 @@ Today's sophisticated digital HF software applications such as HRD and Fldigi pr
 
 <figure class="img-left">
 <figcaption>Figure 1 - PSK31 Test Transmit & Receive Chain</figcaption>
-<amp-img on="tap:lightbox01" role="button" tabindex="0" src="figure01.png" width="1440" height="810" layout="responsive" layout="responsive" />
+<amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure01.png') %>" width="1440" height="810" layout="responsive" layout="responsive" />
 </figure>
 
 Figure 1 shows the transmitter and receiver chain used to derive PSK31 performance.  The transmit chain consists of a Notebook PC that hosts the Digipan PSK31 software application, SignaLink USB interface box, and the ICOM 718 transceiver.  It was much easier to source the PSK31 signal with its unique varicode characters, idle time synchronization bit pattern, and modulation scheme using an actual HF transceiver chain than to simulate the PSK31 waveform from a separate waveform generator.  However, the disadvantage of using an actual transceiver was the reduction in fidelity in controlling the power level of the transmitted signal. So to compensate, I held the transmit signal power constant and varied the amplitude level of Noise from the waveform generator to attain the desired SNR.   Note in Figure 1 the PSK31 received signal and noise are combined using the Mini-Circuits Splitter. This is the same splitter (combiner) used by Bob Allison, WB1GCM, in his ARRL publication, *Amateur Radio Transceiver Performance Testing* <sup>3</sup>.  Another extremely important criteria applied to this test was to use a realistic PSK31 received signal level that falls into the range of signal levels measured by our transceiver's S-Unit meter. You know, the meter which tells us the received signal strength in the range of S1, S2, S3, …. through S9 and S9 + X dB.  A received signal amplitude of -81.61 dBm  was achieved at the Yaesu FTdx3000 transceiver Receive Out test port by:
@@ -41,17 +41,17 @@ Figure 1 shows the transmitter and receiver chain used to derive PSK31 performan
 
 <figure class="img-right">
 <figcaption>Figure 2 - FTdx3000_RX OUT</figcaption>
-<amp-img on="tap:lightbox01" role="button" tabindex="0" src="figure02.png" width="1440" height="510" layout="responsive" />
+<amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure02.png') %>" width="1440" height="510" layout="responsive" />
 </figure>
 
-The Receive Output port on the Yaesu functioned as the SNR measurement reference point in this laboratory experiment. The schematic associated with the RX OUT Jack is derived from Yaesu's FTdx3000 technical brochure <sup>4</sup> and shown in Figure 2. Not to beat a dead horse, but, a -81.61 dBm PSK31 signal is really small, equivalent to 6.9 pico watts, or 6.9 x 10-9 milliwatts.  
+The Receive Output port on the Yaesu functioned as the SNR measurement reference point in this laboratory experiment. The schematic associated with the RX OUT Jack is derived from Yaesu's FTdx3000 technical brochure <sup>4</sup> and shown in Figure 2. Not to beat a dead horse, but, a -81.61 dBm PSK31 signal is really small, equivalent to 6.9 pico watts, or 6.9 x 10-9 milliwatts.
 
 <figure class="img-left">
 <figcaption>Figure 3 – PSK31 Receiver Test Signal</figcaption>
-<amp-img on="tap:lightbox01" role="button" tabindex="0" src="figure03.jpg" width="1440" height="810" layout="responsive" />
+<amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure03.jpg') %>" width="1440" height="810" layout="responsive" />
 </figure>
 
-The PSK31 received signal was measured using the DSA 815 Spectrum Analyzer, Figure 3. It is important to note the Resolution Bandwidth (RBW) I used on the spectrum analyzer to make this measurement. To capture the total power of the received signal, I used the lowest spectrum analyzer resolution bandwidth, RBW = 100 Hz, because the bandwidth of a PSK31 signal is less than 100 Hz. That resolution bandwidth was also used to measure the noise power level needed to establish the desired SNR.  It was absolutely critical to use the same RBW for both signal measurement and noise power measurement. Recall from the PODCAST, Joel Hallas reminds us the amount of signal needed to successfully decode an intelligible PSK31 message is based upon the amount of noise present in the receiver bandwidth. Since most of the PSK31 signal is confined to less than 100 Hz of bandwidth we only have to be concerned  about the noise present in that 100 Hz of bandwidth when deriving the noise amplitude required for a specific SNR.  
+The PSK31 received signal was measured using the DSA 815 Spectrum Analyzer, Figure 3. It is important to note the Resolution Bandwidth (RBW) I used on the spectrum analyzer to make this measurement. To capture the total power of the received signal, I used the lowest spectrum analyzer resolution bandwidth, RBW = 100 Hz, because the bandwidth of a PSK31 signal is less than 100 Hz. That resolution bandwidth was also used to measure the noise power level needed to establish the desired SNR.  It was absolutely critical to use the same RBW for both signal measurement and noise power measurement. Recall from the PODCAST, Joel Hallas reminds us the amount of signal needed to successfully decode an intelligible PSK31 message is based upon the amount of noise present in the receiver bandwidth. Since most of the PSK31 signal is confined to less than 100 Hz of bandwidth we only have to be concerned  about the noise present in that 100 Hz of bandwidth when deriving the noise amplitude required for a specific SNR.
 
 ## Test Execution and Results
 
@@ -74,7 +74,7 @@ Constant BPSK31 Signal Power Average (dBm) at the Yaesu FTdx3000 RX OUT port as 
 
 <figure class="img-right">
 <figcaption>Figure 4 – Example Noise Waveform for the SNR 12dB Test</figcaption>
-<amp-img on="tap:lightbox01" role="button" tabindex="0" src="figure04.jpg" width="1440" height="810" layout="responsive" />
+<amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure04.jpg') %>" width="1440" height="810" layout="responsive" />
 </figure>
 
 Initial test cases were executed to get the PSK31 performance at SNRs 30, 20, 10, and 6 dB.  And then, through an iterative process of evaluating test message reception readability at other SNRs, I was able to approximate the lowest PSK31 SNR that resulted in perfect message intelligibility.
