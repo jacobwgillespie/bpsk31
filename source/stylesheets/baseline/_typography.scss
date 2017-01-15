@@ -213,7 +213,8 @@ a {
 
   // Tables.
   table {
-    @include sassline(eta, $headingtype, 2, 0, all);
+    @include sassline(iota, $headingtype, 2, 0, all);
+    @include baseline($fontsize: iota, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
 
     font-family: unquote(map-get($headingtype, font-family));
     font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
@@ -224,9 +225,15 @@ a {
     thead {
 
       th {
-        @include sassline(zeta, $headingtype, 2, 0, all);
+        @include sassline(theta, $headingtype, 2, 0, all);
         padding-bottom: 1px;
+        border-bottom: 1px solid #ccc;
       }
+    }
+
+    th, td {
+      padding: 0 1em;
+      border: 1px solid #eee;
     }
   }
 
@@ -361,5 +368,9 @@ a {
   // Ascending and descending numbers with OpenType.
   .oldstyle-numerals {
     font-feature-settings: 'onum', 'kern';
+  }
+
+  figcaption {
+    font-weight: map-get($bodytype, bold);
   }
 }

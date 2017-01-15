@@ -21,7 +21,8 @@ page '/*.txt', layout: false
 set :markdown,
     layout_engine: :haml,
     with_toc_data: true,
-    fenced_code_blocks: true
+    fenced_code_blocks: true,
+    tables: true
 set :markdown_engine, :redcarpet
 
 activate :autoprefixer do |config|

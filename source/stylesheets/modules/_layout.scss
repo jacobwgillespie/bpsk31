@@ -12,3 +12,43 @@
     @include maxwidth(4);
   }
 }
+
+.img-left, .img-right {
+  max-width: 500px;
+  min-width: 120px;
+  width: 100%;
+}
+
+.img-left {
+  float: left;
+  margin-right: 1em;
+}
+
+.img-right {
+  float: right;
+  margin-left: 1em;
+}
+
+.clear {
+  clear: both;
+}
+
+.typeset ol {
+  margin-left: 2em;
+}
+
+.image-grid {
+  @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+
+  display: flex;
+  flex-direction: row;
+
+  &>div {
+    flex: 1;
+    padding-right: 1em;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
