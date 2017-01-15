@@ -33,7 +33,7 @@ Today's sophisticated digital HF software applications such as HRD and Fldigi pr
 <amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure01.png') %>" width="1440" height="810" layout="responsive" layout="responsive" />
 </figure>
 
-Figure 1 shows the transmitter and receiver chain used to derive PSK31 performance.  The transmit chain consists of a Notebook PC that hosts the Digipan PSK31 software application, SignaLink USB interface box, and the ICOM 718 transceiver.  It was much easier to source the PSK31 signal with its unique varicode characters, idle time synchronization bit pattern, and modulation scheme using an actual HF transceiver chain than to simulate the PSK31 waveform from a separate waveform generator.  However, the disadvantage of using an actual transceiver was the reduction in fidelity in controlling the power level of the transmitted signal. So to compensate, I held the transmit signal power constant and varied the amplitude level of Noise from the waveform generator to attain the desired SNR.   Note in Figure 1 the PSK31 received signal and noise are combined using the Mini-Circuits Splitter. This is the same splitter (combiner) used by Bob Allison, WB1GCM, in his ARRL publication, *Amateur Radio Transceiver Performance Testing* <sup>3</sup>.  Another extremely important criteria applied to this test was to use a realistic PSK31 received signal level that falls into the range of signal levels measured by our transceiver's S-Unit meter. You know, the meter which tells us the received signal strength in the range of S1, S2, S3, …. through S9 and S9 + X dB.  A received signal amplitude of -81.61 dBm  was achieved at the Yaesu FTdx3000 transceiver Receive Out test port by:
+*Figure 1* shows the transmitter and receiver chain used to derive PSK31 performance.  The transmit chain consists of a Notebook PC that hosts the Digipan PSK31 software application, SignaLink USB interface box, and the ICOM 718 transceiver.  It was much easier to source the PSK31 signal with its unique varicode characters, idle time synchronization bit pattern, and modulation scheme using an actual HF transceiver chain than to simulate the PSK31 waveform from a separate waveform generator.  However, the disadvantage of using an actual transceiver was the reduction in fidelity in controlling the power level of the transmitted signal. So to compensate, I held the transmit signal power constant and varied the amplitude level of Noise from the waveform generator to attain the desired SNR.   Note in *Figure 1* the PSK31 received signal and noise are combined using the Mini-Circuits Splitter. This is the same splitter (combiner) used by Bob Allison, WB1GCM, in his ARRL publication, *Amateur Radio Transceiver Performance Testing* <sup>3</sup>.  Another extremely important criteria applied to this test was to use a realistic PSK31 received signal level that falls into the range of signal levels measured by our transceiver's S-Unit meter. You know, the meter which tells us the received signal strength in the range of S1, S2, S3, …. through S9 and S9 + X dB.  A received signal amplitude of -81.61 dBm  was achieved at the Yaesu FTdx3000 transceiver Receive Out test port by:
 
 1. sampling the RF signal at the output of the ICOM 718 antenna port (47 dB attenuation)
 1. adding another 60 db of attenuation provided by two separate in-line attenuators, and
@@ -44,14 +44,14 @@ Figure 1 shows the transmitter and receiver chain used to derive PSK31 performan
 <amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure02.png') %>" width="1440" height="510" layout="responsive" />
 </figure>
 
-The Receive Output port on the Yaesu functioned as the SNR measurement reference point in this laboratory experiment. The schematic associated with the RX OUT Jack is derived from Yaesu's FTdx3000 technical brochure <sup>4</sup> and shown in Figure 2. Not to beat a dead horse, but, a -81.61 dBm PSK31 signal is really small, equivalent to 6.9 pico watts, or 6.9 x 10-9 milliwatts.
+The Receive Output port on the Yaesu functioned as the SNR measurement reference point in this laboratory experiment. The schematic associated with the RX OUT Jack is derived from Yaesu's FTdx3000 technical brochure <sup>4</sup> and shown in *Figure 2*. Not to beat a dead horse, but, a -81.61 dBm PSK31 signal is really small, equivalent to 6.9 pico watts, or 6.9 x 10-9 milliwatts.
 
 <figure class="img-left">
 <figcaption>Figure 3 – PSK31 Receiver Test Signal</figcaption>
 <amp-img on="tap:lightbox01" role="button" tabindex="0" src="<%= image_path('articles/psk31-vs-cw/figure03.jpg') %>" width="1440" height="810" layout="responsive" />
 </figure>
 
-The PSK31 received signal was measured using the DSA 815 Spectrum Analyzer, Figure 3. It is important to note the Resolution Bandwidth (RBW) I used on the spectrum analyzer to make this measurement. To capture the total power of the received signal, I used the lowest spectrum analyzer resolution bandwidth, RBW = 100 Hz, because the bandwidth of a PSK31 signal is less than 100 Hz. That resolution bandwidth was also used to measure the noise power level needed to establish the desired SNR.  It was absolutely critical to use the same RBW for both signal measurement and noise power measurement. Recall from the PODCAST, Joel Hallas reminds us the amount of signal needed to successfully decode an intelligible PSK31 message is based upon the amount of noise present in the receiver bandwidth. Since most of the PSK31 signal is confined to less than 100 Hz of bandwidth we only have to be concerned  about the noise present in that 100 Hz of bandwidth when deriving the noise amplitude required for a specific SNR.
+The PSK31 received signal was measured using the DSA 815 Spectrum Analyzer, *Figure 3*. It is important to note the Resolution Bandwidth (RBW) I used on the spectrum analyzer to make this measurement. To capture the total power of the received signal, I used the lowest spectrum analyzer resolution bandwidth, RBW = 100 Hz, because the bandwidth of a PSK31 signal is less than 100 Hz. That resolution bandwidth was also used to measure the noise power level needed to establish the desired SNR.  It was absolutely critical to use the same RBW for both signal measurement and noise power measurement. Recall from the PODCAST, Joel Hallas reminds us the amount of signal needed to successfully decode an intelligible PSK31 message is based upon the amount of noise present in the receiver bandwidth. Since most of the PSK31 signal is confined to less than 100 Hz of bandwidth we only have to be concerned  about the noise present in that 100 Hz of bandwidth when deriving the noise amplitude required for a specific SNR.
 
 ## Test Execution and Results
 
@@ -79,7 +79,7 @@ Constant BPSK31 Signal Power Average (dBm) at the Yaesu FTdx3000 RX OUT port as 
 
 Initial test cases were executed to get the PSK31 performance at SNRs 30, 20, 10, and 6 dB.  And then, through an iterative process of evaluating test message reception readability at other SNRs, I was able to approximate the lowest PSK31 SNR that resulted in perfect message intelligibility.
 
-Figure 4 is an example of the DSA 815 trace for the SNR = 12 dB test case where Noise amplitude = -93.64 dBm.
+*Figure 4* is an example of the DSA 815 trace for the SNR = 12 dB test case where Noise amplitude = -93.64 dBm.
 Detailed test results are shown in Table 2.
 
 <div class="clear"></div>
@@ -101,7 +101,7 @@ Signal to Noise Ratio (dB) | Received Test Message Intelligibility
 
 The PSK31 threshold between perfect and nearly perfect text message reception is 12 dB, that is, the PSK31 signal must be at least 16 times stronger or 2 S-Units stronger than the noise for perfect message reception.  Hence, if the Noise is an S2 the PSK31 signal should be an S4 to attain a perfect text message copy.  A near-perfect message copy can be received for SNRs less than 12 dB down to about 9 dB, or 1.5 S-Units above the noise. In short, the PSK31 signal should be about 1.5 to 2 S-Units stronger than the noise for a near-perfect or perfect text message, respectively.
 
-Figure 5 shows the received text message where SNR = 12 dB. A perfect copy of 16 lines of text. I would give this a R (Readability) = 5, perfectly readable.
+*Figure 5* shows the received text message where SNR = 12 dB. A perfect copy of 16 lines of text. I would give this a R (Readability) = 5, perfectly readable.
 
 **Figure 5 – PSK31 Text Messages at SNR 12 dB**
 
@@ -125,7 +125,7 @@ The quick brown Fox jumps over the lazy Dog 1234567890
 The quick brown Fox jumps over the lazy Dog 1234567890
 </code></pre>
 
-Whereas, Figure 6 shows the received text message for SNR = 9 dB.  Most of the 12 lines of text are intelligible; however, there are missing characters and a few missing words, I would give this a R = 4, readable with practically no difficulty.
+Whereas, *Figure 6* shows the received text message for SNR = 9 dB.  Most of the 12 lines of text are intelligible; however, there are missing characters and a few missing words, I would give this a R = 4, readable with practically no difficulty.
 
 **Figure 6 - PSK31 Text Messages at SNR 9 dB**
 
@@ -144,7 +144,7 @@ The quick bjumps over the laz4567890
 The quick brown Fox jumper the lazy Dog 123456790
 </code></pre>
 
-With a SNR = 7.7, Figure 7 shows the message text is readable but with considerable difficulty. I would report this message as R = 3.
+With a SNR = 7.7, *Figure 7* shows the message text is readable but with considerable difficulty. I would report this message as R = 3.
 
 **Figure 7 - PSK31 Text Messages at SNR 7.7 dB**
 
@@ -161,7 +161,7 @@ The qown Fox jumps over the laz234567890
 The qwn Fou jumps over the lazick brown Fox mps over tg 1n i d suicrolazy Dog 123456790
 </code></pre>
 
-And finally, Figure 8 shows the message text is barely readable, occasional words distinguishable at SNR = 6.38 dB. During most of this reception, Digipan was not able to demodulate and decode the text characters.  I would give this a R = 2.
+And finally, *Figure 8* shows the message text is barely readable, occasional words distinguishable at SNR = 6.38 dB. During most of this reception, Digipan was not able to demodulate and decode the text characters.  I would give this a R = 2.
 
 **Figure 8 - PSK31 Text Messages at SNR 6.38 dB**
 
