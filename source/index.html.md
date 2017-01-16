@@ -1,6 +1,7 @@
 ---
 title: PSK31
 hide_comments: true
+show_ads: true
 description: >
   PSK31 is a digital communication mode for amateur radio. It is one of the most common and easy-to-use digital modes as a PSK31 station needs only to consist of an SSB transceiver, an antenna, and a soundcard equipped PC.
 ---
